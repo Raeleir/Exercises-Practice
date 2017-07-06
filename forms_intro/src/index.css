@@ -1,0 +1,15 @@
+body {
+    text-align: center;
+    background-color: black;
+}
+
+div {
+    color: white;
+}
+
+.fish {
+    list-style: none;
+    padding: 0;
+    height: 100px;
+    margin-top: 200px;
+}
