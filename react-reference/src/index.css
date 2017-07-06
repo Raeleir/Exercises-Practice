@@ -1,0 +1,32 @@
+body {
+    background-color: lawngreen;
+}
+
+.title {
+    text-align: center;
+    color: brown;
+}
+
+p {
+    font-family: fantasy;
+}
+
+img {
+    height: 200px;
+    margin-left: 500px;
+    margin-top: 100px;
+}
+
+footer h1 {
+    float: left;
+}
+
+footer ul {
+    float: right;
+}
+
+footer ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 10px;
+}

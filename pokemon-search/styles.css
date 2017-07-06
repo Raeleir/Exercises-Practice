@@ -1,0 +1,33 @@
+body {
+    background-image: url('https://s-media-cache-ak0.pinimg.com/originals/fd/a5/4c/fda54c319560defd740a487111829e42.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-top: 30px;
+    font-family: fantasy;
+}
+
+input {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+    height: 5vh;
+}
+
+button {
+    margin-top: 20px;
+    width: 100%;
+    height: 5vh;
+}
+
+#output {
+    margin-top: 100px;
+}
+
+img, h4 {
+    margin-top: 30px;
+}
+
+img {
+    width: 200px;
+}

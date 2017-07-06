@@ -1,0 +1,40 @@
+body {
+    font-family: 'open sans condensed';
+    letter-spacing: 3px;
+}
+
+#headingContainer {
+    font-size: 45px;
+    background-color: #323232;
+    color: #a10808;
+}
+
+#headingContainer .row .col-md-12 div img {
+    margin-right: 50px;
+    height: 100px;
+}
+
+#mainContainer {
+    padding-top: 70px;
+    background-color: lightgray;
+}
+
+#mainContainer .row .col-md-8 .row .col-md-4 .pic {
+    margin-top: 25px;
+    height: 400px;
+    position: relative;
+}
+
+#mainContainer .row .col-md-8 .row .col-md-4 .pic div {
+    width: 100%;
+    text-align: center;
+    background-color: #3163a7;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    opacity: .8;
+    font-size: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}

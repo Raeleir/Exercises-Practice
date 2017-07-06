@@ -1,0 +1,13 @@
+body {
+    font-family: "indie flower", cursive;
+    background-color: black;
+    text-align: center;
+    font-size: 5em;
+}
+
+button {
+    font-family: "indie flower", cursive;
+    font-size: .7em;
+    margin: 20px;
+    border-radius: 100%;
+}

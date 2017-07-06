@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+}
+
+.parent {
+    z-index: 1;
+    height: 100vh;
+}
+
+.wrapper {
+    position: absolute;
+    width: 99vw;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.one {
+    top: 5%;
+}
+
+.two {
+    top: 40%;
+}
+
+.three {
+    bottom: 5%;
+}
+
+.dj {
+    width: 250px;
+    height: 250px;
+    margin-right: 100px;
+    transition: all 0s ease-in-out;
+}
+
+.last {
+    margin-right: 0px;
+}
+
+button {
+    position: relative;
+    z-index: 3;
+    font-size: 2em;
+    font-family: fantasy;
+    padding: 20px;
+    color: white;
+    background-color: transparent;
+    border: none;
+}
