@@ -1,41 +1,222 @@
-body {
-    background-image: url('http://runmum.wpengine.netdna-cdn.com/wp-content/uploads/sites/16/2014/11/to-do-list1.jpg');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100vw;
-    margin: 0px;
+@media (max-width: 2000px) {
+    body {
+        background-image: url('http://runmum.wpengine.netdna-cdn.com/wp-content/uploads/sites/16/2014/11/to-do-list1.jpg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100vw;
+        margin: 0px;
+    }
+
+    .wrapper {
+        position: relative;
+    }
+
+    .input {
+        position: absolute;
+        width: 18vw;
+        height: 4vh;
+        font-size: 2em;
+        border: 1px solid gray;
+        box-shadow: -2px 2px gray;
+        right: 20px;
+        top: 20px;
+    }
+
+    ul {
+        position: absolute;
+        top: 16vh;
+        left: 35.8vw;
+        font-size: 4em;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        margin-bottom: 11px;
+        width: 720px;
+    }
+    
+    p {
+        display: inline-block;
+        margin: 0;
+    }
+    
+    span {
+        background-color: red;
+        border-radius: 10px;
+        font-size: 30px;
+        float: right;
+        height: 35px;
+        width: 35px;
+        text-align: center;
+    }
+    
+    .edit {
+        display: inline-block;
+        width: 3vw;
+        font-size: 20px;
+        float: right;
+    }
 }
 
-.wrapper {
-    position: relative;
+@media (max-width: 1024px) {
+    body {
+        background-image: url('http://runmum.wpengine.netdna-cdn.com/wp-content/uploads/sites/16/2014/11/to-do-list1.jpg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100vw;
+        margin: 0px;
+    }
+
+    .wrapper {
+        position: relative;
+    }
+
+    .input {
+        position: absolute;
+        width: 40vw;
+        height: 4vh;
+        font-size: 2em;
+        border: 1px solid gray;
+        box-shadow: -2px 2px gray;
+        right: 1vw;
+        top: 1vh;
+    }
+
+    ul {
+        position: absolute;
+        top: 25vh;
+        left: 22vw;
+        font-size: 4em;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        margin-bottom: 1vh;
+    }
 }
 
-p {
-    font-size: 2em;
+@media (max-width: 768px) {
+    body {
+        background-image: url('http://runmum.wpengine.netdna-cdn.com/wp-content/uploads/sites/16/2014/11/to-do-list1.jpg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100vw;
+        margin: 0px;
+    }
+
+    .wrapper {
+        position: relative;
+    }
+
+    .input {
+        position: absolute;
+        width: 40vw;
+        height: 4vh;
+        font-size: 2em;
+        border: 1px solid gray;
+        box-shadow: -2px 2px gray;
+        right: 1vw;
+        top: 1vh;
+    }
+
+    ul {
+        position: absolute;
+        top: 24.2vh;
+        left: 22vw;
+        font-size: 3.3em;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        margin-bottom: .5vh;
+    }
 }
 
-input {
-    position: absolute;
-    width: 18vw;
-    height: 4vh;
-    font-size: 2em;
-    border: 1px solid gray;
-    box-shadow: -2px 2px gray;
-    right: 1vw;
-    top: 1vh;
+@media (max-width: 420px) {
+    body {
+        background-image: url('http://runmum.wpengine.netdna-cdn.com/wp-content/uploads/sites/16/2014/11/to-do-list1.jpg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100vw;
+        margin: 0px;
+    }
+
+    .wrapper {
+        position: relative;
+    }
+
+    .input {
+        position: absolute;
+        width: 40vw;
+        height: 4vh;
+        font-size: 1em;
+        border: 1px solid gray;
+        box-shadow: -2px 2px gray;
+        right: 1vw;
+        top: 1vh;
+    }
+
+    ul {
+        position: absolute;
+        top: 30.5vh;
+        left: 22.5vw;
+        font-size: 1.8em;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        margin-bottom: .35vh;
+    }
 }
 
-ul {
-    position: absolute;
-    top: 19vh;
-    left: 35vw;
-    font-size: 3em;
-    padding: 0;
-    list-style: none;
-}
+@media (max-width: 375px) {
+    body {
+        background-image: url('http://runmum.wpengine.netdna-cdn.com/wp-content/uploads/sites/16/2014/11/to-do-list1.jpg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100vw;
+        margin: 0px;
+    }
 
-li {
-    margin-bottom: 3vh;
+    .wrapper {
+        position: relative;
+    }
+
+    .input {
+        position: absolute;
+        width: 40vw;
+        height: 4vh;
+        font-size: 1em;
+        border: 1px solid gray;
+        box-shadow: -2px 2px gray;
+        right: 1vw;
+        top: 1vh;
+    }
+
+    ul {
+        position: absolute;
+        top: 29.8vh;
+        left: 22.2vw;
+        font-size: 1.8em;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        margin-bottom: -.1vh;
+    }
 }

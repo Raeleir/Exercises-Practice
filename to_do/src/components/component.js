@@ -2,21 +2,28 @@ import React from "react";
 
 class Component extends React.Component {
     genTasks() {
-        this.toDoList = this.props.tasks.map((task, index) => {
+        return this.props.tasks.map((task, index) => {
             return (
-                <li key={task + index} onClick={() => {this.props.handleClick(index)}}>
-                    {task}
+                <li key={task + index}>
+                    <p>
+                       {task}
+                    </p>
+                    <span onClick={() => {this.props.handleClick(index)}}>X</span>
+                    <input className="edit" placeholder="Edit" 
+                        onKeyPress={(event) => {this.props.handleEditKeyPress(event, index)}} 
+                        value={this.props.editValue} 
+                        onChange={this.props.handleEditInput} />
                 </li>
             )
         })
     }
     render(){
-        this.genTasks();
         return (
             <div className="wrapper">
-                <input onKeyPress={(event) => {this.props.handleKeyPress(event)}} value={this.props.taskValue} onChange={this.props.handleInput} placeholder="Add Task" />
+                <input className="input" onKeyPress={(event) => 
+                    {this.props.handleKeyPress(event)}} value={this.props.taskValue} onChange={this.props.handleInput} placeholder="Add Task" />
                 <ul>
-                   {this.toDoList}
+                   {this.genTasks()}
                 </ul>
             </div>
         )

@@ -7,7 +7,8 @@ class Container extends React.Component {
         super();
         this.state = {
             tasks: [],
-            taskValue: ""
+            taskValue: "turkey",
+            editValue: "fish"
         }
         autoBind(this);
     }
@@ -17,12 +18,28 @@ class Container extends React.Component {
             taskValue: event.target.value
         })
     }
+    handleEditInput(event) {
+        this.setState({
+            ...this.state,
+            editValue: event.target.value
+        })
+    }
     handleKeyPress(event) {
         if(event.key === 'Enter'){
             this.setState({
                 ...this.state,
                 tasks: [...this.state.tasks, this.state.taskValue],
                 taskValue: ""
+            })
+        }
+    }
+    handleEditKeyPress(event, index) {
+        if(event.key === 'Enter'){
+            let oldTasks = [...this.state.tasks];
+            oldTasks.splice(index, 1, this.state.editValue);
+            this.setState({
+                ...this.state,
+                tasks: oldTasks
             })
         }
     }
@@ -36,7 +53,7 @@ class Container extends React.Component {
     }
     render(){
         return (
-            <Component handleClick={this.handleClick} handleInput={this.handleInput} taskValue={this.state.taskValue} handleKeyPress={this.handleKeyPress} tasks={this.state.tasks} />
+            <Component handleClick={this.handleClick} handleEditInput={this.handleEditInput} handleInput={this.handleInput} taskValue={this.state.taskValue} handleKeyPress={this.handleKeyPress} tasks={this.state.tasks} handleEditKeyPress={this.handleEditKeyPress}/>
         )
     }
 }
