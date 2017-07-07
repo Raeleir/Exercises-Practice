@@ -4,7 +4,7 @@ class Form extends React.Component {
     genNames() {
         this.nameLi = this.props.names.map((name, index) => {
             return (
-                <p key={name + index}>
+                <p key={name + index} onClick={() => {this.props.handleClick(index)}}>
                     {name}
                 </p>
             )

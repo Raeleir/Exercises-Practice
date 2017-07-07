@@ -7,17 +7,17 @@ class FormT extends React.Component {
     constructor() {
         super();
         this.state = {
-            names: ["Jordan", "Dakota"],
+            names: [],
             nameValue: ""
         };
         autoBind(this);
     };
-    input(event) {
+    handleInput(event) {
         this.setState({
             ...this.state,
             nameValue: event.target.value
         });
-    }
+    };
     handleKeyPress(event) {
         if(event.key === 'Enter'){
             this.setState({
@@ -25,12 +25,20 @@ class FormT extends React.Component {
                 names: [...this.state.names, this.state.nameValue],
                 nameValue: ""
             });
-        }
-    }
+        };
+    };
+    handleClick(index) {
+        let oldNames = [...this.state.names];
+        oldNames.splice(index, 1);
+        this.setState({
+            ...this.state,
+            names: oldNames
+        });
+    };
     render() {
         return (
             <div>
-                <Form handleInput={this.input} nameValue={this.state.nameValue} handleKeyPress={this.handleKeyPress} names={this.state.names} brand="May Cohort"/>
+                <Form handleClick={this.handleClick} handleInput={this.handleInput} nameValue={this.state.nameValue} handleKeyPress={this.handleKeyPress} names={this.state.names} brand="May Cohort"/>
             </div>
         )
     }
