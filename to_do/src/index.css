@@ -36,9 +36,10 @@
     li {
         margin-bottom: 11px;
         width: 720px;
+        position: relative;
     }
     
-    p {
+    .task {
         display: inline-block;
         margin: 0;
     }
@@ -54,10 +55,11 @@
     }
     
     .edit {
-        display: inline-block;
-        width: 3vw;
-        font-size: 20px;
-        float: right;
+        width: 0px;
+        margin: 0;
+        border: 0;
+        padding: 0;
+        font-size: 40px;
     }
 }
 

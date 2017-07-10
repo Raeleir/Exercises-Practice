@@ -7,8 +7,8 @@ class Container extends React.Component {
         super();
         this.state = {
             tasks: [],
-            taskValue: "turkey",
-            editValue: "fish"
+            taskValue: "",
+            editValue: "",
         }
         autoBind(this);
     }
@@ -33,17 +33,19 @@ class Container extends React.Component {
             })
         }
     }
-    handleEditKeyPress(event, index) {
+    handleEditKeyPress(event, index, task) {
         if(event.key === 'Enter'){
             let oldTasks = [...this.state.tasks];
             oldTasks.splice(index, 1, this.state.editValue);
             this.setState({
                 ...this.state,
-                tasks: oldTasks
+                tasks: oldTasks,
             })
+            document.querySelector(`.${task}`).style.width = "0px";
+            document.querySelector(`.${task + index}`).style.display = "inline";
         }
     }
-    handleClick(index) {
+    handleDelClick(index) {
         let oldTasks = [...this.state.tasks];
         oldTasks.splice(index, 1);
         this.setState({
@@ -51,9 +53,13 @@ class Container extends React.Component {
             tasks: oldTasks
         })
     }
+    handleEditClick(task, index) {
+        document.querySelector(`.${task}`).style.width = "90%";
+        document.querySelector(`.${task + index}`).style.display = "none";
+    }
     render(){
         return (
-            <Component handleClick={this.handleClick} handleEditInput={this.handleEditInput} handleInput={this.handleInput} taskValue={this.state.taskValue} handleKeyPress={this.handleKeyPress} tasks={this.state.tasks} handleEditKeyPress={this.handleEditKeyPress}/>
+            <Component pStyle={this.state.pStyle} iStyle={this.state.iStyle} handleEditClick={this.handleEditClick} handleDelClick={this.handleDelClick} handleEditInput={this.handleEditInput} handleInput={this.handleInput} taskValue={this.state.taskValue} handleKeyPress={this.handleKeyPress} tasks={this.state.tasks} handleEditKeyPress={this.handleEditKeyPress}/>
         )
     }
 }

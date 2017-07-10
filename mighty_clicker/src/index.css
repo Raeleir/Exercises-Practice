@@ -1,0 +1,13 @@
+button {
+    display: inline-block;
+    height: 50px;
+}
+
+h3 {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+body {
+    text-align: center;
+}

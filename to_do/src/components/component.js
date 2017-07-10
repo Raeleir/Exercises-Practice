@@ -5,14 +5,15 @@ class Component extends React.Component {
         return this.props.tasks.map((task, index) => {
             return (
                 <li key={task + index}>
-                    <p>
-                       {task}
-                    </p>
-                    <span onClick={() => {this.props.handleClick(index)}}>X</span>
-                    <input className="edit" placeholder="Edit" 
-                        onKeyPress={(event) => {this.props.handleEditKeyPress(event, index)}} 
+                   <input className={`${task} edit`} placeholder="Edit" 
+                        onKeyPress={(event) => {this.props.handleEditKeyPress(event, index, task)}} 
                         value={this.props.editValue} 
                         onChange={this.props.handleEditInput} />
+                    <p className={`${task + index} task`} style={this.props.pStyle}>
+                       {task}
+                    </p>
+                    <span onClick={() => {this.props.handleEditClick(task, index)}}>edit</span>
+                    <span onClick={() => {this.props.handleDelClick(index)}}>X</span>
                 </li>
             )
         })
