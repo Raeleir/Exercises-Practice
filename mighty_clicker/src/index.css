@@ -1,13 +1,36 @@
 button {
-    display: inline-block;
     height: 50px;
 }
 
-h3 {
-    display: inline-block;
-    margin-left: 20px;
+h3, button {
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 body {
     text-align: center;
+}
+
+div {
+    display: inline-block;
+}
+
+.bars {
+    display: block;
+    width: 95vw;
+}
+
+.red {
+    background-color: red;
+    width: 50%;
+}
+
+.blue {
+    background-color: blue;
+    width: 50%;
+}
+
+.red, .blue {
+    display: inline-block;
+    height: 30px;
 }
