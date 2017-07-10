@@ -23,16 +23,16 @@ class Container extends React.Component {
             if(color === "blue"){
                 return {
                     ...this.state,
-                    red: this.state.red - 1,
-                    blue: this.state.blue + 1
+                    red: prevState.red - 1,
+                    blue: prevState.blue + 1
                 }
             } else {
                 return {
                     ...this.state,
-                    red: this.state.red + 1,
-                    blue: this.state.blue - 1
+                    red: prevState.red + 1,
+                    blue: prevState.blue - 1
                 }
-        }
+            }
         });
     }
     
