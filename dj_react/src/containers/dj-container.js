@@ -37,7 +37,7 @@ class DJCont extends React.Component {
                 backgroundColor: `${colors2[Math.floor(Math.random() * colors.length)]}`
             }
         })
-        }, 1)
+        }, 500)
     }
     scroll() {
         clearInterval()

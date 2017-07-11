@@ -54,6 +54,7 @@ class Container extends React.Component {
         })
     }
     handleEditClick(task, index) {
+        document.querySelector(`.${task}`).setAttribute("placeholder", `${task}`);
         document.querySelector(`.${task}`).style.width = "90%";
         document.querySelector(`.${task + index}`).style.display = "none";
     }

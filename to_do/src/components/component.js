@@ -5,7 +5,7 @@ class Component extends React.Component {
         return this.props.tasks.map((task, index) => {
             return (
                 <li key={task + index}>
-                   <input className={`${task} edit`} placeholder="Edit" 
+                   <input className={`${task} edit`} 
                         onKeyPress={(event) => {this.props.handleEditKeyPress(event, index, task)}} 
                         value={this.props.editValue} 
                         onChange={this.props.handleEditInput} />

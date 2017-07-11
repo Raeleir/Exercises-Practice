@@ -40,12 +40,14 @@ class Container extends React.Component {
         return ( 
             <div>
                 <Button handleClick={this.click} color="red" counter={this.state.red}/>
+                
                 <Button handleClick={this.click} color="blue" counter={this.state.blue}/>
+                
                 <div className="bars">
-                <div className="red" style={{width: this.state.red + "%"}}>
-                </div>
-                <div className="blue" style={{width: this.state.blue + "%"}}>
-                </div>
+                    <div className="red" style={{width: this.state.red + "%"}}>
+                    </div>
+                    <div className="blue" style={{width: this.state.blue + "%"}}>
+                    </div>
                 </div>
             </div> 
         )

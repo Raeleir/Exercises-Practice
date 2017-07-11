@@ -13,7 +13,7 @@ var getPokemon = function (str) {
     });
 }
 
-getPokemon(str);
+getPokemon(input);
 
 //^^^^ WIP ^^^^//
 
