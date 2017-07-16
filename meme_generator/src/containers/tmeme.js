@@ -24,7 +24,7 @@ const mapStateToProps = (state) => {
     return state;
 };
 
-//tell it how to turn actions into functions that can be called via props
+//tell redux how to turn actions into functions that can be called via props
 const mapDispatchToProps = (dispatch) => {
     return bindActionCreators(actionCreators, dispatch);
 };
