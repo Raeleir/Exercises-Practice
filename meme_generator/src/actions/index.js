@@ -3,4 +3,4 @@ export function makeMeme(meme) {
         type: "MAKE_MEME",
         meme
     }
-};
+}
