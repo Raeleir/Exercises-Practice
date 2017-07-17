@@ -23,13 +23,11 @@ class Tform extends React.Component {
         });
     }
     handleClear() {
-        this.setState({
-            ...this.state,
-            name1: "",
-            name2: "",
-            name3: ""
-        })
-        console.log("Form state", this.state);
+        for(let key in this.state){
+            this.setState({
+                [key]: ""
+            })
+        }
     }
     render() {
         return (

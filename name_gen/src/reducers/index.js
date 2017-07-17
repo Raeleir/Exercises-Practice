@@ -6,7 +6,6 @@ let defaultState = {
 
 const mainReducer = (state = defaultState, action) => {
     if(action.type === "PICK_NAME"){
-        console.log("Reducer State", state);
         return {
             ...state,
             name1: action.name.name1,
