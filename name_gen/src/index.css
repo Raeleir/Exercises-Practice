@@ -1,8 +1,23 @@
 body {
     background-color: black;
     color: white;
+    text-align: center;
 }
 
 input {
     margin: 20px;
+    font-size: 20px;
+    border-radius: 3px;
+}
+
+button {
+    width: 150px;
+    margin: 50px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 80px;
 }
