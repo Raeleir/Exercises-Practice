@@ -18,14 +18,20 @@ h1 {
 }
 
 .item {
-    border: 1px solid transparent;
-    border-radius: 2%;
+    border: 10px solid white;
+    border-radius: 5%;
     color: white;
     background-color: #476099;
+    margin-bottom: 10px;
 }
 
-img {
-    width: 100%;
+h2, h4 {
+    word-wrap: break-word;
+}
+
+.item div {
+    background-size: cover;
+    height: 35vh;
     border-radius: 2%;
 }
 
@@ -37,8 +43,27 @@ input {
     text-align: center;
 }
 
+.delete {
+    position: absolute;
+    top: -17px;
+    left: -7px;
+    font-size: 12px !important;
+    width: 50px;
+}
+
+.edit {
+    position: absolute;
+    top: -17px;
+    right: -7px;
+    font-size: 12px !important;
+}
+
+.btn:hover {
+    background-color: white !important;
+}
+
 .inputs {
-    margin-bottom: 50px;
+    margin-bottom: 35px;
 }
 
 .btn {

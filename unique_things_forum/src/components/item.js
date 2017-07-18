@@ -1,13 +1,15 @@
 import React from "react";
-import { Col } from "react-bootstrap";
+import { Col, Button } from "react-bootstrap";
 
 class Item extends React.Component {
     render() {
         return (
             <Col className="item" md={4}>
-                <h2>Title Test</h2>
-                <img alt="" src="https://s-media-cache-ak0.pinimg.com/736x/f0/e9/a8/f0e9a8c12dd4f3cda522178bd8061286--funny-face-swap-face-swaps.jpg"/>
-                <h4>Description Test</h4>
+                <Button onClick={() => {this.props.handleDel(this.props.index)}} className="delete">X</Button>
+                <Button onClick={() => {this.props.handleEdit()}} className="edit">Edit</Button>
+                <h2>{this.props.item.title}</h2>
+                <div style={{backgroundImage: `url(${this.props.item.url})`}}></div>
+                <h4>{this.props.item.desc}</h4>
             </Col>
         )
     }

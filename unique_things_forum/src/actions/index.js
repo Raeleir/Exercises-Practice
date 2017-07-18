@@ -4,3 +4,10 @@ export function genItem(item){
         item
     }
 }
+
+export function delItem(index){
+    return {
+        type: "DEL_ITEM",
+        index
+    }
+}

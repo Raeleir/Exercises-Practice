@@ -7,6 +7,11 @@ import TForm from "./containers/tform.js";
 import TItem from "./containers/titem.js";
 import CHeader from "./header";
 
+import { Provider } from "react-redux";
+import { createStore } from "redux";
+import reducers from "./reducers/index";
+const store = createStore(reducers);
+
 class App extends React.Component {
     render() {
         return (
@@ -21,4 +26,4 @@ class App extends React.Component {
     }
 }
 
-ReactDOM.render(<App />, document.querySelector("#root"));
+ReactDOM.render(<Provider store={store}><App/></Provider>, document.querySelector("#root"));
