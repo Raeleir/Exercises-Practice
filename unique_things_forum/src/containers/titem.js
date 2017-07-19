@@ -13,7 +13,7 @@ class TItems extends React.Component {
         super();
         this.state = {
             inputs: []
-        }
+        };
         autoBind(this);
     }
     handleInput(key, index, event) {

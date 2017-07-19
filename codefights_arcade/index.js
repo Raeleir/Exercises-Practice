@@ -107,4 +107,17 @@ function commonCharacterCount(s1, s2) {
     return total;
 }
 
-//
+//isLucky
+function isLucky(n) {
+    var n = n.toString();
+    let nLen = n.length;
+    let half1 = n.substring(0, nLen/2);
+    let half2 = n.substring(nLen/2, nLen);
+    let sum1 = 0, sum2 = 0;
+    for(i=0;i<nLen/2;i++){
+        sum1 += Number(half1[i]);
+        sum2 += Number(half2[i]);
+    }
+    return sum1 === sum2;
+}
+
