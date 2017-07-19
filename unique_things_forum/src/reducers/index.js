@@ -9,11 +9,18 @@ const mainReducer = (state = defaultState, action) => {
             items: [...state.items, action.item],
         }
     } else if(action.type === "DEL_ITEM") {
-        let oldState = [...state.items];
-        oldState.splice(action.index, 1);
+        let copy = [...state.items];
+        copy.splice(action.index, 1);
         return {
             ...state,
-            items: oldState
+            items: copy
+        }
+    } else if(action.type === "EDIT") {
+        let copy = [...state.items];
+        copy[action.index] = action.item;
+        return {
+            ...state,
+            items: copy
         }
     } else {
         return {...state};

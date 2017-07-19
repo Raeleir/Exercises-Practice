@@ -6,15 +6,27 @@ import ItemList from "../components/item-list";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as actionCreators from "../actions/";
+import autoBind from "react-autobind";
 
 class TItems extends React.Component {
-    edit() {
-        alert("got em");
+    constructor() {
+        super();
+        this.state = {
+            inputs: []
+        }
+        autoBind(this);
+    }
+    handleInput(key, index, event) {
+        let inputCopy = [...this.state.inputs];
+        inputCopy[index][key] = event.target.value;
+        this.setState({
+            inputs: inputCopy
+        })
     }
     render() {
         return (
             <Row>
-                <ItemList gState={this.props.items} handleDel={this.props.delItem} handleEdit={this.edit}/>
+                <ItemList inputs={this.state.inputs} gState={this.props.items} handleInput={this.handleInput} handleDel={this.props.delItem} handleEdit={this.props.edit}/>
             </Row>
         )
     }

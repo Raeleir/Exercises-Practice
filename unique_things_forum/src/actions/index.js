@@ -11,3 +11,11 @@ export function delItem(index){
         index
     }
 }
+
+export function edit(item, index){
+    return {
+        type: "EDIT",
+        item,
+        index
+    }
+}
