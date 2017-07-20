@@ -1,13 +1,14 @@
 let defaultState = {
-    color: "yellow"
+    color: "green",
+    names: ["green"]
 };
 
 const mainReducer = (state = defaultState, action) => {
     if(action.type === "RANDOM_COLOR"){
-        console.log(action.color);
         return {
             ...state,
-            color: action.color
+            color: action.color,
+            names: action.names
         }
     } else {
         return state;

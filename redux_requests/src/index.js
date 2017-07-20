@@ -4,9 +4,10 @@ import Container from "./containers/container";
 import "./index.css";
 
 import { Provider } from "react-redux";
-import { createStore } from "redux";
+import { createStore, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
 import reducers from "./reducers/index.js";
-const store = createStore(reducers);
+const store = createStore(reducers, applyMiddleware(thunk));
 
 class App extends React.Component {
     render() {

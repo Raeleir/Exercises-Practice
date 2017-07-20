@@ -9,7 +9,7 @@ import * as actionCreators from "../actions/";
 class Container extends React.Component {
     render() {
         return (
-            <Component handleClick={this.props.randomColor} color={this.props.color}/>
+            <Component handleClick={this.props.loadColor} names={this.props.names} color={this.props.color}/>
         )
     }
 }
