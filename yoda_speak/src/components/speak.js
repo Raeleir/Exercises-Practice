@@ -4,9 +4,18 @@ class Speak extends React.Component {
     render() {
         return (
             <div>
-                <input/>
-                <button>Translate</button>
-                <h3>Test Output</h3>
+                <h1>Yoda Speak</h1>
+
+                <div>
+                    <input onChange={(event) => {
+                        this.props.handleChange(event)
+                    }} value={this.props.input} />
+                    <button onClick={() => {
+                        this.props.handleClick(this.props.input);
+                    }}>Translate</button>
+                </div>
+
+                <h3>{this.props.text}</h3>
             </div>
         )
     }
