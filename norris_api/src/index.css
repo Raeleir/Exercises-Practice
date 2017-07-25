@@ -1,0 +1,43 @@
+body {
+    background-color: black;
+    font-family: 'Cinzel';
+}
+
+* {
+    text-align: center;
+}
+
+h1 {
+    font-size: 4em;
+    color: crimson;
+    font-family: 'Cinzel Decorative';
+}
+
+.input {
+    margin-bottom: 100px;
+}
+
+input {
+    text-align: left;
+    width: 200px;
+}
+
+input, button {
+    font-size: 1.2em;
+    border-radius: 10px;
+}
+
+button {
+    background-color: transparent;
+    margin-left: 30px;
+    font-family: 'Cinzel';
+    color: white;
+    width: 120px;
+}
+
+.output {
+    width: 700px;
+    margin: auto;
+    font-size: 1.8em;
+    color: white;
+}
