@@ -1,10 +1,9 @@
 import axios from "axios";
 
 export function convertText(text) {
-    let splitText = text.split(" ");
     return(dispatch) => {
         if(text !== ""){
-            return axios.get(`https://api.icndb.com/jokes/random?escape=javascript&ampfirstName=${splitText[0]}`).then((response) => {
+            return axios.get(`https://api.icndb.com/jokes/random?escape=javascript&amp?firstName=${text}`).then((response) => {
                 console.log("convertText Log: " + response.data.value.joke);
                 let joke = response.data.value.joke;
                 dispatch(setText(joke));
