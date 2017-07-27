@@ -6,6 +6,7 @@ import ContactContainer from "./containers/contact-container";
 import { Route, BrowserRouter, Switch } from "react-router-dom";
 import BlogContainer from "./containers/blog-container";
 import Navbar from "./components/navbar";
+import ArticleContainer from "./containers/article-container";
 
 class App extends React.Component {
     render() {
@@ -18,6 +19,7 @@ class App extends React.Component {
                             <Route exact path="/" component={HomeContainer}/>
                             <Route exact path="/contact" component={ContactContainer}/>
                             <Route exact path="/blog" component={BlogContainer}/>
+                            <Route exact path="/article/:index" component={ArticleContainer}/>
                         </Switch>
                     </div>
                 </BrowserRouter>

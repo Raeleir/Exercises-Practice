@@ -1,5 +1,5 @@
 import React from "react";
-import Blog from "../components/blog";
+import Article from "../components/article";
 
 let articles = [
     {
@@ -7,21 +7,22 @@ let articles = [
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat elementum erat vitae finibus. Quisque blandit massa quis lorem interdum, et sodales orci tincidunt. In tristique convallis mauris."
     },
     {
-        name: "persona",
+        name: "thingermajig",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat elementum erat vitae finibus. Quisque blandit massa quis lorem interdum, et sodales orci tincidunt. In tristique convallis mauris."
     },
     {
-        name: "persona",
+        name: "faceboy spiderpig",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla volutpat elementum erat vitae finibus. Quisque blandit massa quis lorem interdum, et sodales orci tincidunt. In tristique convallis mauris."
     }
 ];
 
-class BlogContainer extends React.Component {
+class ArticleContainer extends React.Component {
     render() {
+        let index = this.props.match.params.index;
         return (
-            <Blog articles={articles}/>
+            <Article article={articles[index]}/>
         )
     }
 }
 
-export default BlogContainer;
+export default ArticleContainer;
