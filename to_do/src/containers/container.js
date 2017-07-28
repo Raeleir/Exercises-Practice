@@ -9,7 +9,7 @@ class Container extends React.Component {
             tasks: [],
             taskValue: "",
             editValue: "",
-        }
+        };
         autoBind(this);
     }
     handleInput(event) {
