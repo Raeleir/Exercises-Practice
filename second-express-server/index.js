@@ -11,8 +11,10 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use(cors());
 
-app.use((req, res, next) => {
-    next();
+
+
+app.listen(PORT, () => {
+    console.log(`Starting server on PORT ${PORT}`);
 })
 
 //POST || CREATE
@@ -30,7 +32,6 @@ app.get("/", (req, res) => {
 
 //READ (Search)
 app.get("/:id", (req, res) => {
-    console.log(req.params);
     for(i=0;i<arr.length;i++){
         if(arr[i].id === req.params.id){
             res.send(arr[i]);
@@ -76,8 +77,3 @@ app.delete("/:id", (req, res) => {
 })
 
 
-
-
-app.listen(PORT, () => {
-    console.log(`Starting server on PORT ${PORT}`);
-})
