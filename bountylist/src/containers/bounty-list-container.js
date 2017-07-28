@@ -12,7 +12,7 @@ class BountyListContainer extends React.Component {
     render(){
         return (
             <div>
-                <BountyList bounties={this.props.bounties}/>
+                <BountyList bounties={this.props.bounties} handleDelete={this.props.deleteData} handleSave={this.props.updateData} />
             </div>
         )
     }

@@ -65,12 +65,12 @@ app.delete("/:id", (req, res) => {
     for(i=0;i<arr.length;i++){
         if(arr[i].id === req.params.id){
             arr.splice(i, 1);
-            return res.status(404).send({
+            return res.status(200).send({
                 "message": "ITEM DELETED"
             })
         }
     }
-    return res.send({
+    return res.status(404).send({
         "message": "ERROR ITEM NOT FOUND"
     });
 })

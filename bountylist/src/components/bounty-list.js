@@ -4,7 +4,7 @@ import BountyContainer from "../containers/bounty-container";
 class BountyList extends React.Component {
     genBounties() {
         return this.props.bounties.map((bounty, index) => {
-            return <BountyContainer key={bounty.name + index} bounty={bounty} />
+            return <BountyContainer handleDelete={this.props.handleDelete} handleSave={this.props.handleSave} key={bounty.name + index} bounty={bounty} />
         })
     }
     render(){
