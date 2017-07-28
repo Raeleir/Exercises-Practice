@@ -25,7 +25,7 @@ class FormContainer extends React.Component {
     render(){
         return (
             <div>
-                <FormComponent state={this.state} handleClick={this.props.setData} handleChange={this.change} />
+                <FormComponent state={this.state} handleClick={this.props.addData} handleChange={this.change} />
             </div>
         )
     }
