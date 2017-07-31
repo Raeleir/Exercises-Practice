@@ -1,19 +1,18 @@
 import React from "react";
-import BountyContainer from "../containers/bounty-container";
 
-class BountyList extends React.Component {
-    genBounties() {
-        return this.props.bounties.map((bounty, index) => {
-            return <BountyContainer handleDelete={this.props.handleDelete} handleSave={this.props.handleSave} key={bounty.name + index} bounty={bounty} />
+class NounList extends React.Component {
+    genNouns() {
+        return this.props.nounThings.map((nounThing, index) => {
+            return <Noun handleDelete={this.props.handleDelete} handleSave={this.props.handleSave} key={nounThing.name + index} nounThing={nounThing} />
         })
     }
     render(){
         return (
             <div>
-                {this.genBounties()}
+                {this.genNouns()}
             </div>
         )
     }
 }
 
-export default BountyList;
+export default NounList;

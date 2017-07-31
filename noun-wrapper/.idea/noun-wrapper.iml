@@ -5,6 +5,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="bountylist" />
+    <orderEntry type="module" module-name="api_review" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_FOLDERS">
