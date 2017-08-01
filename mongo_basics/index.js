@@ -24,10 +24,10 @@ MongoClient.connect(url, (err, db) => {
     //     db.close();
     // })
 
-    catbabies.updateOne({_id: new mongodb.ObjectID("597fb171f2a7e71062acc025")}, {$set: {color: "orange"}}, (err, result) => {
-        err ? console.log(err) : console.log("Item updated");
-        db.close();
-    })
+    // catbabies.updateOne({_id: new mongodb.ObjectID("597fb171f2a7e71062acc025")}, {$set: {color: "orange"}}, (err, result) => {
+    //     err ? console.log(err) : console.log("Item updated");
+    //     db.close();
+    // })
 
 });
 
