@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/first-mongoose.iml" filepath="$PROJECT_DIR$/.idea/first-mongoose.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../second-express-server/.idea/second-express-server.iml" filepath="$PROJECT_DIR$/../second-express-server/.idea/second-express-server.iml" />
     </modules>
   </component>
 </project>

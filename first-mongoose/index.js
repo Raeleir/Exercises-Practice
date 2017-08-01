@@ -1,23 +1,41 @@
 const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
-
 mongoose.connect("mongodb://localhost:27017/todos");
 
-let todoSchema = new Schema({
-    title: {
-        type: String,
-        required: true,
-        unique: true
-    },
-    description: String,
-    dateDue: {
-        type: Date,
-        default: Date.now
-    },
-    price: Number
+let express = require("express");
+let bodyParser = require("body-parser");
+let cors = require("cors");
+let app = express();
+
+const port = process.env.PORT || 8080;
+const todoRouter = require("./routes/index.js");
+
+app.use(bodyParser.urlencoded({extends: false}));
+app.use(bodyParser.json());
+app.use(cors());
+app.use("/todo", todoRouter);
+app.listen(port, () => {
+    console.log(`Server started on port ${port}`);
 });
 
-let Todo = mongoose.model("todolist", todoSchema);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // let manana = new Date();
 // manana.setDate(manana.getDate() + 1);
@@ -33,20 +51,20 @@ let Todo = mongoose.model("todolist", todoSchema);
 // });
 //
 // console.log(todoSchema.title);
-
-
-Todo.find({}, (err, data) => {
-    err ? console.log(err) : console.log("Found", data);
-});
-
+//
+//
+// Todo.find({}, (err, data) => {
+//     err ? console.log(err) : console.log("Found", data);
+// });
+//
 // Todo.findOne({_id: "5980badc747ca004e99e1ff6"}, (err, data) => {
 //     err ? console.log(err) : console.log("Found", data);
 // });
-
+//
 // Todo.deleteOne({_id: "5980badc747ca004e99e1ff6"}, (err, data) => {
 //     err ? console.log(err) : console.log("Deleted", data);
 // });
-
+//
 //
 // let newData = {
 //     title: "new title",
@@ -56,28 +74,3 @@ Todo.find({}, (err, data) => {
 // Todo.findByIdAndUpdate({_id: "5980b5839c1b5004cab1e765"}, newData, {new: true}, (err, data) => {
 //     err ? console.log(err) : console.log("Found", data);
 // });
-
-
-
-
-
-
-
-
-// C R U D
-// Coalesce
-// Reconcile
-// Undulate
-// Disrobe
-
-// C R U D
-// Collaborate
-// Rejuvenate
-// Undulate
-// Duplicate
-
-// C R U D
-// Coach
-// Revolutionize
-// Undulate
-// Disrobe
