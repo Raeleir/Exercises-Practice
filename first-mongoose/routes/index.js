@@ -2,12 +2,6 @@ let express = require("express");
 let todoRouter = express.Router();
 let Todo = require("../models/index.js");
 
-todoRouter.use((req, res, next) => {
-    for(key in req.query){
-        if(typeof req.query[key] === "string") req.query[key] = req.query[key].toLowerCase();
-    }
-    next();
-});
 
 todoRouter.post("/", (req, res) => {
     let newTodo = new Todo(req.body);
@@ -46,3 +40,17 @@ todoRouter.delete("/:id", (req, res) => {
 });
 
 module.exports = todoRouter;
+
+
+
+
+
+
+
+
+// todoRouter.use((req, res, next) => {
+//     for(key in req.query){
+//         if(typeof req.query[key] === "string") req.query[key] = req.query[key].toLowerCase();
+//     }
+//     next();
+// });

@@ -2,7 +2,6 @@ import React from "react";
 import BountyList from "../components/bounty-list";
 
 import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
 import * as actionCreators from "../actions/";
 
 class BountyListContainer extends React.Component {
@@ -22,8 +21,4 @@ const mapStateToProps = (state) => {
     return state;
 };
 
-const mapDispatchToProps = (dispatch) => {
-    return bindActionCreators(actionCreators, dispatch)
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(BountyListContainer);
+export default connect(mapStateToProps, actionCreators)(BountyListContainer);
