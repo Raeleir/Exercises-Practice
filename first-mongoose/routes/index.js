@@ -40,17 +40,3 @@ todoRouter.delete("/:id", (req, res) => {
 });
 
 module.exports = todoRouter;
-
-
-
-
-
-
-
-
-// todoRouter.use((req, res, next) => {
-//     for(key in req.query){
-//         if(typeof req.query[key] === "string") req.query[key] = req.query[key].toLowerCase();
-//     }
-//     next();
-// });

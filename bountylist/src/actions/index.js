@@ -29,7 +29,7 @@ export function addData(data) {
 
 export function deleteData(id) {
     return (dispatch) => {
-        return axios.delete(`http://localhost:8080/bounty/${_id}`).then((response) => {
+        return axios.delete(`http://localhost:8080/bounty/${id}`).then((response) => {
             dispatch(loadData());
         }).catch((error) => {
             throw error;
@@ -39,7 +39,7 @@ export function deleteData(id) {
 
 export function updateData(id, data) {
     return (dispatch) => {
-        return axios.put(`http://localhost:8080/bounty/${_id}`, data).then((response) => {
+        return axios.put(`http://localhost:8080/bounty/${id}`, data).then((response) => {
             dispatch(loadData());
         }).catch((error) => {
             throw error;

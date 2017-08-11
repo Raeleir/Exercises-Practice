@@ -1,10 +1,10 @@
 let defaultState = {
     bounties: [
         {
-            name: "testname",
-            location: "testlocal",
-            reward: "testreward",
-            wanted: "testwanted"
+            name: "",
+            location: "",
+            reward: "",
+            wanted: ""
         }
     ]
 };
